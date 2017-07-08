@@ -1,5 +1,11 @@
+let namer = require("./namer");
+
 class Venerator {
   toJSON(config) {
+    namer.setOptions({
+      unitNames: config.rules.noUnitNames !== true
+    });
+
     return this.parseRules(config);
   }
 
@@ -37,13 +43,16 @@ class Venerator {
   }
 
   buildRule(rule, breakpoint, expansion, value, alias) {
-    return {
+    let r = {
       prop: rule[0],
       breakpoint: breakpoint,
       expansion: expansion,
       alias: alias,
       value: value
     };
+
+    r.name = namer.name(r);
+    return r;
   }
 
   nullArray(len) {

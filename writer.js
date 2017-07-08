@@ -1,20 +1,15 @@
 const fs = require("fs");
-let namer = require("./namer");
 
 class Writer {
   write(rules, config) {
     const breakpoints = [[null]].concat(
       Object.entries(config.rules.breakpoints)
     );
-    const options = {
-      unitNames: config.rules.noUnitNames !== true
-    };
 
-    namer.setOptions(options);
-    return breakpoints.map(this.renderBreakpoint(options, rules)).join(" ");
+    return breakpoints.map(this.renderBreakpoint(rules)).join(" ");
   }
 
-  renderBreakpoint(options, rules) {
+  renderBreakpoint(rules) {
     return breakpoint => {
       return breakpoint[0] === null
         ? `${this.rulesForBreakpoint(rules, breakpoint)}`
@@ -39,7 +34,7 @@ class Writer {
   }
 
   writeRule(rule) {
-    return `.${namer.name(rule)} { ${this.expandedProp(rule)}: ${rule.value} }`;
+    return `.${rule.name} { ${this.expandedProp(rule)}: ${rule.value} }`;
   }
 
   expandedProp(rule) {
