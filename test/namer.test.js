@@ -41,6 +41,7 @@ test("ShortenedName reads from default .naming.yml", t => {
 });
 
 test("Creates valid value names when unitNames set to false", t => {
+  namer.setOptions({ unitNames: false });
   t.is(namer.valName(backgroundRedM), "red");
   t.is(namer.valName(ffSansSerif), "sans-serif");
   t.is(namer.valName(marginTop10L), "10");
@@ -57,4 +58,11 @@ test("Creates a valid breakpoint and value name", t => {
 
 test("Creates a breakpoint and expansion name", t => {
   t.is(namer.name(marginBottom10L), "mb-l-10");
+});
+
+test("Creates valid value names when unitNames set to true", t => {
+  namer.setOptions({ unitNames: true });
+  t.is(namer.valName(backgroundRedM), "red");
+  t.is(namer.valName(ffSansSerif), "sans-serif");
+  t.is(namer.valName(marginTop10L), "10px");
 });
