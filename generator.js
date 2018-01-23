@@ -18,7 +18,7 @@ class Venerator {
 
   parseRule(rule) {
     let r = [];
-    const breakpoints = rule[1].breakpoints || [null];
+    const breakpoints = [null].concat(rule[1].breakpoints || []);
     const expansions = rule[1].expansions || [null];
     const values = rule[1].values || rule[1];
     const aliases = rule[1].aliases || this.nullArray(values.length);

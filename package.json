@@ -5,6 +5,9 @@
   "bin": {
     "subatomic": "./index.js"
   },
+  "scripts": {
+    "test": "ava test"
+  },
   "repository": {},
   "author": "Johan Halse",
   "license": "MIT",
@@ -12,7 +15,9 @@
     "change-case": "^3.0.1",
     "color-namer": "^1.1.0",
     "commander": "^2.9.0",
-    "postcss": "^6.0.1",
     "yamljs": "^0.2.8"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0"
   }
 }

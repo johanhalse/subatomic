@@ -1,0 +1,44 @@
+rules:
+  noUnitNames: true
+
+  breakpoints:
+    s: 500px
+    m: 700px
+    l: 900px
+    xl: 1100px
+
+  atoms:
+    font-family:
+      values:
+        - Arial, Helvetica, sans-serif
+        - Georgia, Times New Roman, serif
+      aliases:
+        - sans-serif
+        - serif
+    font-size:
+      values: [12px, 16px, 24px, 48px]
+      breakpoints: [s, m, xl]
+    line-height: [0, 1, 1.6]
+    width: [0, 50%, 100%]
+    display:
+      values: [inline-block, block]
+      breakpoints: [s, m, l, xl]
+    color: ["#ff1122", "#11ff22", "#1122ff"]
+    margin:
+      values: [0px, 10px, 20px, 30px, 40px]
+      breakpoints: [s, m, l]
+      expansions: [top, left, right, bottom]
+
+  molecules:
+    topleft:
+      top: 0
+      left: 0
+    offscreen:
+      position: absolute
+      left: -9999px
+
+  molecules:
+    - top: 0
+      left: 0
+    - position: absolute
+      left: -9999px

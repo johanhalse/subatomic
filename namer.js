@@ -1,9 +1,14 @@
+var fs = require("fs");
 var yaml = require("yamljs");
 var changeCase = require("change-case");
 
 class Namer {
   constructor() {
-    this.naming = yaml.load("./naming.yml");
+    const nameFile = fs.existsSync(`${process.cwd()}/.naming.yml`) ?
+      `${process.cwd()}/.naming.yml` :
+      `${__dirname}/.naming.yml`;
+
+    this.naming = yaml.load(nameFile);
   }
 
   setOptions(options) {

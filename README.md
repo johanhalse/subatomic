@@ -9,14 +9,14 @@ The functional/atomic CSS generator. Make your stylesheets sing with the power o
 - [x] Breakpoints and responsive design
 - [x] Expansions, like margin-left or border-left or whatever
 - [x] Aliases, since things like font-family values don't have auto generatable names
-- [ ] Make it work as a proper globally installed binary
-- [ ] ...but make naming.yml overridable
+- [x] Make it work as a proper globally installed binary
+- [x] ...but make naming.yml overridable
 - [ ] Inline Sublime Text auto-completion, documentation, and "class doesn't exist" warnings
 - [ ] Probably the same for Atom
 - [ ] But somebody else definitely gets do do it for Vim
 - [ ] Auto-generated documentation / style guide
 - [ ] Do some kind of screencast because the benefits of this thing aren't immediately obvious
-- [ ] Probably like a zillion edge cases with naming and properties
+- [ ] Probably like a zillion edge cases with naming and properties?
 
 
 ## Unanswered stuff
