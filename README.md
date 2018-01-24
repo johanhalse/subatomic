@@ -11,6 +11,7 @@ The functional/atomic CSS generator. Make your stylesheets sing with the power o
 - [x] Aliases, since things like font-family values don't have auto generatable names
 - [x] Make it work as a proper globally installed binary
 - [x] ...but make naming.yml overridable
+- [ ] Tests coverage of the biggest parts
 - [ ] Inline Sublime Text auto-completion, documentation, and "class doesn't exist" warnings
 - [ ] Probably the same for Atom
 - [ ] But somebody else definitely gets do do it for Vim

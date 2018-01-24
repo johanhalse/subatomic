@@ -1,0 +1,40 @@
+rules:
+  noUnitNames: true
+
+  breakpoints:
+    s: 500px
+    m: 700px
+
+  atoms:
+    font-family:
+      values:
+        - Arial, Helvetica, sans-serif
+        - Georgia, Times New Roman, serif
+      aliases:
+        - sans-serif
+        - serif
+    font-size:
+      values: [12px, 16px]
+      breakpoints: [s, m]
+    line-height: [0, 1, 1.6]
+    width: [0, 50%, 100%]
+    display:
+      values: [inline-block, block]
+    margin:
+      values: [0px, 10px]
+      breakpoints: [s, m]
+      expansions: [top, left]
+
+  molecules:
+    topleft:
+      top: 0
+      left: 0
+    offscreen:
+      position: absolute
+      left: -9999px
+
+  molecules:
+    - top: 0
+      left: 0
+    - position: absolute
+      left: -9999px
